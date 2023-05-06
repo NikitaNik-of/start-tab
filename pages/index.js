@@ -3,6 +3,7 @@ import topimg from "../public/images/topimg.jpg"
 import { Inter } from 'next/font/google'
 import { TbArrowUpRight, TbPlayerPlay, TbSearch, TbPhotoSearch } from 'react-icons/tb'
 import { useState } from 'react'
+import LinkButton from '@/components/LinkButton'
 
 
 
@@ -76,10 +77,10 @@ export default function Home() {
 
   return (
     <main
-      className={`flex min-h-screen flex-col items-center justify-center p-24`}
+      className={`flex min-h-screen flex-col items-center justify-between p-24`}
     >
-      <div className='w-[700px] grow flex flex-col justify-around'>
-        <div>
+      <div className='flex flex-col justify-between min-h-full'>
+        <div className='w-[700px]'>
           <div className='relative h-48 mb-5'>
             <text className='absolute bottom-[2px] left-1 text-[14px] text-gray-600 italic'>{"Валаамский монастырь. Никольский скит. 9 августа 2022"}</text>
             <Image alt='' src={topimg} className='absolute h-48 object-cover rounded-xl duration-500 hover:-translate-y-6 transition-all'/>
@@ -103,7 +104,7 @@ export default function Home() {
           </div>
         </div>
         <div className='text-center'>
-          <div className='text-sm text-cyan-500 pt-16 pb-1'>Начни поиск с символа...</div>
+          <div className='text-sm text-cyan-500 pt-8 pb-1'>Начни поиск с символа...</div>
           <div className='text-[14px] text-gray-500 flex justify-around'>
             <button className='hover:text-gray-400' onClick={() => {setSearch("!" + search)}}><text className='text-gray-200'>!</text>{" открыть ссылку"}</button>
             <button className='hover:text-gray-400' onClick={() => {setSearch("#" + search)}}><text className='text-gray-200'>#</text>{" искать в Яндекс.Картинки"}</button>
@@ -113,7 +114,15 @@ export default function Home() {
         {/* <button onClick={() => {changeIcon(0)}} className='w-12 h-12 bg-cyan-950 hover:bg-cyan-800 rounded-xl p-2 hover:shadow-lg hover:shadow-cyan-500/40 transition-all group duration-300'>{"0"}</button>
         <button onClick={() => {changeIcon(1)}} className='w-12 h-12 bg-cyan-950 hover:bg-cyan-800 rounded-xl p-2 hover:shadow-lg hover:shadow-cyan-500/40 transition-all group duration-300'>{"1"}</button>
         <button onClick={() => {changeIcon(2)}} className='w-12 h-12 bg-cyan-950 hover:bg-cyan-800 rounded-xl p-2 hover:shadow-lg hover:shadow-cyan-500/40 transition-all group duration-300'>{"2"}</button>
-        <button onClick={() => {changeIcon(3)}} className='w-12 h-12 bg-cyan-950 hover:bg-cyan-800 rounded-xl p-2 hover:shadow-lg hover:shadow-cyan-500/40 transition-all group duration-300'>{"3"}</button> */}
+      <button onClick={() => {changeIcon(3)}} className='w-12 h-12 bg-cyan-950 hover:bg-cyan-800 rounded-xl p-2 hover:shadow-lg hover:shadow-cyan-500/40 transition-all group duration-300'>{"3"}</button> */}
+      </div>
+      <div className='grow pt-20 flex justify-around w-[900px]'>
+        <LinkButton text='Youtube' type='small'/>
+        <LinkButton text='Twitch' type='small'/>
+        <LinkButton text='VK' type='small'/>
+        <LinkButton text='GitHub' type='small'/>
+        <LinkButton text='GMail' type='small'/>
+        <LinkButton text='Mail' type='small'/>
       </div>
     </main>
   )
