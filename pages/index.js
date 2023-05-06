@@ -77,13 +77,13 @@ export default function Home() {
 
   return (
     <main
-      className={`flex min-h-screen flex-col items-center justify-around p-24`}
+      className={`flex min-h-screen flex-col items-center justify-around p-20`}
     >
       <div className='flex flex-col justify-between min-h-full'>
         <div className='w-[700px]'>
-          <div className='relative h-48 mb-5'>
+          <div className='relative h-44 mb-5'>
             <text className='absolute bottom-[2px] left-1 text-[14px] text-gray-600 italic'>{"Валаамский монастырь. Никольский скит. 9 августа 2022"}</text>
-            <Image alt='' src={topimg} className='absolute h-48 object-cover rounded-xl duration-500 hover:-translate-y-6 transition-all'/>
+            <Image alt='' src={topimg} className='absolute h-44 object-cover rounded-xl duration-500 hover:-translate-y-6 transition-all'/>
           </div>
           <div className='flex space-x-1'>
             <input
@@ -103,8 +103,8 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <div className='text-center'>
-          <div className='text-sm text-cyan-500 pt-8 pb-1'>Начни поиск с символа...</div>
+        <div className='text-center text'>
+          <div className='text-sm text-cyan-700 pt-4 pb-1'>Начни поиск с символа...</div>
           <div className='text-[14px] text-gray-500 flex justify-around'>
             <button className='hover:text-gray-400' onClick={() => {setSearch("!" + search)}}><text className='text-gray-200'>!</text>{" открыть ссылку"}</button>
             <button className='hover:text-gray-400' onClick={() => {setSearch("#" + search)}}><text className='text-gray-200'>#</text>{" искать в Яндекс.Картинки"}</button>
@@ -116,13 +116,27 @@ export default function Home() {
         <button onClick={() => {changeIcon(2)}} className='w-12 h-12 bg-cyan-950 hover:bg-cyan-800 rounded-xl p-2 hover:shadow-lg hover:shadow-cyan-500/40 transition-all group duration-300'>{"2"}</button>
       <button onClick={() => {changeIcon(3)}} className='w-12 h-12 bg-cyan-950 hover:bg-cyan-800 rounded-xl p-2 hover:shadow-lg hover:shadow-cyan-500/40 transition-all group duration-300'>{"3"}</button> */}
       </div>
-      <div className='flex justify-around w-[900px]'>
-        <LinkButton text='Youtube' type='small'/>
-        <LinkButton text='Twitch' type='small'/>
-        <LinkButton text='VK' type='small'/>
-        <LinkButton text='GitHub' type='small'/>
-        <LinkButton text='GMail' type='small'/>
-        <LinkButton text='Mail' type='small'/>
+      <div className=' flex flex-col justify-center items-center'>
+        <div className='flex justify-around w-[900px] mb-4'>
+          <LinkButton text='Youtube' type='small'/>
+          <LinkButton text='YoutubeStudio' type='small'/>
+          <LinkButton text='Twitch' type='small'/>
+          <LinkButton text='TwitchStudio' type='small'/>
+          <LinkButton text='VK' type='small'/>
+          <LinkButton text='GitHub' type='small'/>
+          <LinkButton text='GMail' type='small'/>
+          <LinkButton text='Mail' type='small'/>
+        </div>
+        <div className='flex justify-around w-[700px]'>
+          <LinkButton text='Modrinth' link="modrinth.com/"/>
+          <LinkButton text='WolframAlpha' link="wolframalpha.com/"/>
+          <LinkButton text='Tailwind' link="tailwindcss.com/"/>
+        </div>
+        <div className='flex justify-around w-[700px]'>
+          <LinkButton text='nn-of.ru' link="nn-of.ru/"/>
+          <LinkButton text='RuTracker' link="rutracker.org/"/>
+          <LinkButton text='Lichess' link="lichess.org/"/>
+        </div>
       </div>
     </main>
   )
