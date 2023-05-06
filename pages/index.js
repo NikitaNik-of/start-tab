@@ -77,7 +77,7 @@ export default function Home() {
 
   return (
     <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24`}
+      className={`flex min-h-screen flex-col items-center justify-around p-24`}
     >
       <div className='flex flex-col justify-between min-h-full'>
         <div className='w-[700px]'>
@@ -116,7 +116,7 @@ export default function Home() {
         <button onClick={() => {changeIcon(2)}} className='w-12 h-12 bg-cyan-950 hover:bg-cyan-800 rounded-xl p-2 hover:shadow-lg hover:shadow-cyan-500/40 transition-all group duration-300'>{"2"}</button>
       <button onClick={() => {changeIcon(3)}} className='w-12 h-12 bg-cyan-950 hover:bg-cyan-800 rounded-xl p-2 hover:shadow-lg hover:shadow-cyan-500/40 transition-all group duration-300'>{"3"}</button> */}
       </div>
-      <div className='grow pt-20 flex justify-around w-[900px]'>
+      <div className='flex justify-around w-[900px]'>
         <LinkButton text='Youtube' type='small'/>
         <LinkButton text='Twitch' type='small'/>
         <LinkButton text='VK' type='small'/>
