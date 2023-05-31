@@ -87,6 +87,7 @@ export default function Home() {
           </div>
           <div className='flex space-x-1'>
             <input
+              autoFocus=""
               onKeyDown={input}
               onChange={check}
               value={search}
@@ -106,9 +107,9 @@ export default function Home() {
         <div className='text-center text'>
           <div className='text-sm text-cyan-700 pt-4 pb-1'>Начни поиск с символа...</div>
           <div className='text-[14px] text-gray-500 flex justify-around'>
-            <button className='hover:text-gray-400' onClick={() => {setSearch("!" + search)}}><text className='text-gray-200'>!</text>{" открыть ссылку"}</button>
-            <button className='hover:text-gray-400' onClick={() => {setSearch("#" + search)}}><text className='text-gray-200'>#</text>{" искать в Яндекс.Картинки"}</button>
-            <button className='hover:text-gray-400' onClick={() => {setSearch("@" + search)}}><text className='text-gray-200'>@</text>{" искать в Youtube"}</button>
+            <button className='hover:text-gray-400' onClick={() => {setSearch("!" + search); changeIcon(1);}}><text className='text-gray-200'>!</text>{" открыть ссылку"}</button>
+            <button className='hover:text-gray-400' onClick={() => {setSearch("#" + search); changeIcon(2);}}><text className='text-gray-200'>#</text>{" искать в Яндекс.Картинки"}</button>
+            <button className='hover:text-gray-400' onClick={() => {setSearch("@" + search); changeIcon(3);}}><text className='text-gray-200'>@</text>{" искать в Youtube"}</button>
           </div>
         </div>
         {/* <button onClick={() => {changeIcon(0)}} className='w-12 h-12 bg-cyan-950 hover:bg-cyan-800 rounded-xl p-2 hover:shadow-lg hover:shadow-cyan-500/40 transition-all group duration-300'>{"0"}</button>
